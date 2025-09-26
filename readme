@@ -1,9 +1,5 @@
  🚗 Sistema de Cadastro e Listagem de Veículos
 
-[![Node.js](https://img.shields.io/badge/Node.js-v22.17.1-green)](https://nodejs.org/)
-[![Express](https://img.shields.io/badge/Express-v4.18.2-blue)](https://expressjs.com/)
-[![EJS](https://img.shields.io/badge/EJS-v3.1.9-orange)](https://ejs.co/)
-
 ## Descrição
 Projeto desenvolvido em **Node.js**, utilizando **Express** e **EJS**, seguindo a arquitetura **MVC (Model-View-Controller)**.  
 O sistema permite cadastrar, listar, editar e excluir veículos de forma simples, sendo um exercício prático de backend para iniciantes.
@@ -60,6 +56,7 @@ Instale as dependências:
 npm install
 
 Execute o servidor:
+cd src
 node app.js
 
 Ou com nodemon (reinício automático ao salvar alterações):
