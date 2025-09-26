@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Listagem de Veículos</title>
+</head>
+<body>
+  <h1>Veículos</h1>
+  <table border="1">
+    <tr>
+      <th>ID</th>
+      <th>Marca</th>
+      <th>Modelo</th>
+      <th>Ano</th>
+      <th>Cor</th>
+      <th>Ações</th>
+    </tr>
+    <% veiculos.forEach(v => { %>
+      <tr>
+        <td><%= v.id %></td>
+        <td><%= v.marca %></td>
+        <td><%= v.modelo %></td>
+        <td><%= v.ano %></td>
+        <td><%= v.cor %></td>
+        <td>
+          <form action="/veiculos/editar/<%= v.id %>" method="POST" style="display:inline;">
+            <input type="text" name="marca" placeholder="Nova marca" required>
+            <input type="text" name="modelo" placeholder="Novo modelo" required>
+            <input type="number" name="ano" placeholder="Novo ano" required>
+            <input type="text" name="cor" placeholder="Nova cor" required>
+            <button type="submit">Editar</button>
+          </form>
+          <a href="/veiculos/excluir/<%= v.id %>">Excluir</a>
+        </td>
+      </tr>
+    <% }) %>
+  </table>
+
+  <br>
+  <a href="/veiculos/cadastro">Cadastrar novo veículo</a>
+</body>
+</html>

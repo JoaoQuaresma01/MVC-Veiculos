@@ -1,0 +1,85 @@
+ 🚗 Sistema de Cadastro e Listagem de Veículos
+
+[![Node.js](https://img.shields.io/badge/Node.js-v22.17.1-green)](https://nodejs.org/)
+[![Express](https://img.shields.io/badge/Express-v4.18.2-blue)](https://expressjs.com/)
+[![EJS](https://img.shields.io/badge/EJS-v3.1.9-orange)](https://ejs.co/)
+
+## Descrição
+Projeto desenvolvido em **Node.js**, utilizando **Express** e **EJS**, seguindo a arquitetura **MVC (Model-View-Controller)**.  
+O sistema permite cadastrar, listar, editar e excluir veículos de forma simples, sendo um exercício prático de backend para iniciantes.
+
+---
+
+## Funcionalidades
+
+- ✅ Listar todos os veículos cadastrados.
+- ✅ Adicionar novos veículos.
+- ✅ Editar veículos existentes.
+- ✅ Excluir veículos do sistema.
+- ✅ Validações básicas de formulário (campos obrigatórios e IDs numéricos).
+
+---
+
+## Tecnologias Utilizadas
+
+- [Node.js](https://nodejs.org/)
+- [Express.js](https://expressjs.com/)
+- [EJS](https://ejs.co/)
+- HTML / CSS
+- Arquitetura MVC
+
+---
+
+## Estrutura do Projeto
+
+projeto-veiculos/
+│
+├── app.js # Arquivo principal do servidor
+├── controllers/
+│ └── veiculoController.js # Lógica de controle das rotas
+├── models/
+│ └── veiculoModel.js # Manipulação dos dados (CRUD)
+├── routes/
+│ └── veiculoRoutes.js # Rotas de acesso aos endpoints
+└── views/
+├── listagem.ejs # Página de listagem e edição
+└── cadastro.ejs # Página de cadastro de veículos
+
+
+---
+
+## Instalação e Execução
+
+1. Clone o repositório:
+
+```bash
+git clone <URL_DO_REPOSITORIO>
+cd MVC-VEICULOS
+
+Instale as dependências:
+npm install
+
+Execute o servidor:
+node app.js
+
+Ou com nodemon (reinício automático ao salvar alterações):
+npx nodemon app.js
+
+Abra no navegador:
+http://localhost:3000
+
+Rotas e Testes (Postman ou navegador)
+
+1. Listagem de Veículos
+GET http://localhost:3000/veiculos
+Exibe todos os veículos cadastrados.
+
+2. Cadastro de Veículo
+GET http://localhost:3000/veiculos/cadastro → Exibe formulário.
+POST http://localhost:3000/veiculos/cadastro → Salva o veículo.
+
+3. Edição de Veículo
+POST http://localhost:3000/veiculos/editar/:id
+
+Autor
+João Victor Quaresma de Arruda
